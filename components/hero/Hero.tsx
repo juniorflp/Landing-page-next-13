@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import styles from "./hero.module.css";
 import Link from "next/link";
+import { useGlobalContext } from "@/app/context/store";
 
 const Hero = () => {
   const [showBlackScreen, setShowBlackScreen] = useState(false);
   const [isAnimationActive, setIsAnimationActive] = useState(
     styles["circle-animation"]
   );
+  const { state } = useGlobalContext();
 
   const openBlackScreen = () => {
     if (!showBlackScreen) {

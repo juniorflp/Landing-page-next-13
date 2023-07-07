@@ -1,5 +1,6 @@
 import { Footer, LogoComponent, NavBar } from "@/components";
 import "./globals.css";
+import { GlobalContextProvider } from "./context/store";
 
 export const metadata = {
   title: "Landing Page",
@@ -14,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
-        <NavBar />
-        <LogoComponent />
-        {children}
-        <Footer />
+        <GlobalContextProvider>
+          <NavBar />
+          <LogoComponent />
+          {children}
+          <Footer />
+        </GlobalContextProvider>
       </body>
     </html>
   );
