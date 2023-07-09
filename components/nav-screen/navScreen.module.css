@@ -1,0 +1,104 @@
+.blackScreen {
+  position: fixed;
+  overflow: hidden;
+  top: -50%;
+  right: -40%;
+  width: 150vw;
+  height: 200vh;
+  border-radius: 50%;
+  background-color: black;
+  /* opacity: 0; */
+  z-index: 50;
+  cursor: pointer;
+}
+
+.circle-animation {
+  animation: circle-animation 1s forwards;
+}
+
+.reverse-circle-animation {
+  animation: reverse-circle-animation 2s forwards;
+}
+
+@keyframes circle-animation {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    border-radius: 47%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reverse-circle-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    border-radius: 30%;
+    transform: translateX(-100%);
+  }
+  100% {
+    border-radius: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* --------------------------------------------navbar animation--------------------------------------------- */
+.navContainer {
+  position: relative;
+  margin: 270px auto 0;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.navContainer .animation {
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  background: white;
+  width: 100px;
+  z-index: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.link {
+  z-index: 1;
+}
+
+.navContainer .link:nth-child(1) {
+  width: 120px;
+}
+.navContainer .startHome,
+.link:nth-child(1):hover ~ .animation {
+  width: 90px;
+  left: 35px;
+}
+.navContainer .link:nth-child(2) {
+  width: 100px;
+}
+.navContainer .link:nth-child(2):hover ~ .animation {
+  width: 60px;
+  left: 155px;
+}
+.navContainer .link:nth-child(3) {
+  width: 100px;
+}
+.navContainer .link:nth-child(3):hover ~ .animation {
+  width: 80px;
+  left: 255px;
+}
+.navContainer .link:nth-child(4) {
+  width: 100px;
+}
+.navContainer .link:nth-child(4):hover ~ .animation {
+  width: 60px;
+  left: 355px;
+}
+
+/* --------------------------------------------navbar animation--------------------------------------------- */

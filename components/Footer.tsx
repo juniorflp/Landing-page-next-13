@@ -3,7 +3,7 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <>
-      <div>Footer</div>
+      <div className="h-screen">Footer</div>
     </>
   );
 };

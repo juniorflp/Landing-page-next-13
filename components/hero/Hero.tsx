@@ -1,67 +1,25 @@
-"use client";
-
 import React, { useState } from "react";
-import styles from "./hero.module.css";
-import Link from "next/link";
-import { useGlobalContext } from "@/app/context/store";
+import NavScreen from "../nav-screen/NavScreen";
+import styles from "../nav-screen/navScreen.module.css";
+import ThemeButton from "../ThemeButton";
 
 const Hero = () => {
-  const [showBlackScreen, setShowBlackScreen] = useState(false);
-  const [isAnimationActive, setIsAnimationActive] = useState(
-    styles["circle-animation"]
-  );
-  const { state } = useGlobalContext();
-
-  const openBlackScreen = () => {
-    if (!showBlackScreen) {
-      setShowBlackScreen(true);
-    }
-  };
-
-  const closeBlackScreen = () => {
-    setIsAnimationActive(styles["reverse-circle-animation"]);
-    setTimeout(() => {
-      setShowBlackScreen(false);
-      setIsAnimationActive(styles["circle-animation"]);
-    }, 1000);
-  };
-
   return (
     <>
-      <div
-        className={` ${styles.blackScreen} ${
-          showBlackScreen ? "flex" : "hidden"
-        }  ${isAnimationActive}`}
-        onClick={closeBlackScreen}
-      >
-        <div className="absolute   w-[20%] h-[30%] top-[35%] right-[25%]">
-          <nav className="flex flex-col ">
-            <Link href="/about-us" className="link-hero">
-              About
-            </Link>
-            <Link href="/" className="link-hero">
-              Home
-            </Link>
-            <Link href="/" className="link-hero">
-              Our Work
-            </Link>
-            <Link href="/" className="link-hero">
-              Services
-            </Link>
-            <Link href="/" className="link-hero">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </div>
-      <div className="hero h-screen ">
-        <div className="mt-[30%] pl-40 w-[68%]">
-          <button onClick={openBlackScreen}>open</button>
-          <h1 className="text-5xl font-bold tracking-wide leading-relaxed">
-            We are a group of creative people who believe in great ideas
+      <NavScreen />
+      <div className="hero h-screen px-32">
+        <div className="xl:mt-[38%] lg:mt-[36%]  w-[79%] flex flex-col gap-3">
+          <h1 className="lg:text-[55px] xl:text-[70px] font-semibold leading-tight ">
+            We are a group of creative people
           </h1>
+          <h1 className="text-[55px] xl:text-[70px]  font-semibold leading-tight">
+            who believe in great ideas.
+          </h1>
+          <p className="text-[16px] xl:text-[20px]  leading-tight text-font-gray">
+            WEBSITE | BRANDING | UI/UX | VISUAL | ECOMMERCE | BLOCKCHAIN
+          </p>
         </div>
-        <div className="bg-[#fcfcfc]  xl:w-[1200px] lg:w-[900px] md:w-[600px] xl:h-[1200px] lg:h-[900px] md:h-[600px] rounded-[50%] absolute -z-10 animate-fly"></div>
+        <div className="bg-[#fcfcfc] dark:bg-black xl:w-[1200px] lg:w-[900px] md:w-[600px] xl:h-[1200px] lg:h-[900px] md:h-[600px] rounded-[50%] absolute -z-10 animate-fly" />
       </div>
     </>
   );
