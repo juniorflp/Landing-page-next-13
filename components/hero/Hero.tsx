@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import NavScreen from "../nav-screen/NavScreen";
-import styles from "../nav-screen/navScreen.module.css";
-import ThemeButton from "../ThemeButton";
 
 const Hero = () => {
   return (
@@ -16,7 +14,7 @@ const Hero = () => {
             who believe in great ideas.
           </h1>
           <p className="text-[16px] xl:text-[20px]  leading-tight text-font-gray">
-            WEBSITE | BRANDING | UI/UX | VISUAL | ECOMMERCE | BLOCKCHAIN
+            WEBSITE | BRANDING | UI/UX | VISUAL | ECOMMERCE | IA
           </p>
         </div>
         <div className="bg-[#fcfcfc] dark:bg-black xl:w-[1200px] lg:w-[900px] md:w-[600px] xl:h-[1200px] lg:h-[900px] md:h-[600px] rounded-[50%] absolute -z-10 animate-fly" />

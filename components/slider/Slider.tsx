@@ -4,13 +4,16 @@ import {
   Navigation,
   Pagination,
   Mousewheel,
+  EffectCards,
   EffectCoverflow,
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-cards";
+import "swiper/css/effect-coverflow";
 import { ReactNode } from "react";
-import "./SliderStyle.css";
+import "./Slider.css";
 
 interface SliderProps {
   settings: SwiperProps;
@@ -20,8 +23,14 @@ interface SliderProps {
 const slider = ({ children, settings }: SliderProps) => {
   return (
     <Swiper
-      className="swiper_container"
-      modules={[Navigation, Pagination, Mousewheel, EffectCoverflow]}
+      modules={[
+        Navigation,
+        Pagination,
+        Mousewheel,
+        EffectCards,
+        EffectCoverflow,
+      ]}
+      effect={"cards"}
       {...settings}
     >
       {children}
