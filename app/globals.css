@@ -9,6 +9,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+:root {
+  --gradient: linear-gradient(90deg, #00dbdf, #fc00ff);
+}
+
 /* START: General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;

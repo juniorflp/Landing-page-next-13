@@ -21,13 +21,15 @@ const CardHome: React.FC<CadProps> = ({ image, title, text }) => {
         {activeDiv && (
           <div className={` ${styles.showButton}`}>
             <p className="text-xl">Did you like the theme?</p>
-            <button className="p-2 bg-green-400 text-gray-800 font-bold rounded-lg hover:bg-green-500">
+            <button
+              className={`${styles["button-bg"]} p-2  text-gray-900 font-bold rounded-lg`}
+            >
               See more
             </button>
           </div>
         )}
 
-        <Image src={image} alt="Picture of the author " />
+        <Image src={image} quality={100} alt="Picture of the author " />
       </div>
       <div className="flex flex-col ">
         <p className="text-[14px] font-bold text-font-card uppercase mt-8">

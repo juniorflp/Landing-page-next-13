@@ -3,7 +3,9 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="h-screen">Footer</div>
+      <div className="overflow-hidden bg-bg-color-ligth dark:bg-black flex flex-col h-screen">
+        Footer
+      </div>
     </>
   );
 };

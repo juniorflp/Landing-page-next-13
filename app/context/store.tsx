@@ -46,14 +46,14 @@ export const GlobalContextProvider = ({
 
   const { setTheme } = useTheme();
   useEffect(() => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 300 && window.scrollY <= 3150) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
     function handleScroll() {
       console.log(window.scrollY);
-      if (window.scrollY > 300) {
+      if (window.scrollY > 300 && window.scrollY <= 3150) {
         setTheme("dark");
       } else {
         setTheme("light");

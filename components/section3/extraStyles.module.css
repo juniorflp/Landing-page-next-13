@@ -1,0 +1,71 @@
+.text-gradient {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container-glass {
+  width: 60%;
+  height: 600px;
+  background: linear-gradient(
+    135deg,
+    rgba(183, 183, 183, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(215, 215, 215, 0.18);
+}
+
+.ball1 {
+  animation: fly-ball1 90s ease-in infinite;
+}
+
+@keyframes fly-ball1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(600%, 220%);
+  }
+  80% {
+    transform: translate(700%, -500%);
+  }
+}
+
+.ball2 {
+  animation: fly-ball2 70s ease-in infinite;
+}
+
+@keyframes fly-ball2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(400%, -480%);
+  }
+  80% {
+    transform: translate(-550%, 220%);
+  }
+}
+
+.ball3 {
+  animation: fly-ball3 60s ease-in infinite;
+}
+
+@keyframes fly-ball3 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(800%, -820%);
+  }
+  80% {
+    transform: translate(-550%, 210%);
+  }
+}

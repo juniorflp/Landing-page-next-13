@@ -17,6 +17,9 @@
   justify-content: center;
   gap: 40px;
 }
+.button-bg {
+  background: var(--gradient);
+}
 
 @keyframes showButton {
   from {
