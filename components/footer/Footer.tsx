@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./footerStyle.module.css";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
+import ButtonCircle from "../ButtonCircle";
 
 const Footer: React.FC = () => {
   const pageUp = () => {
@@ -114,12 +115,12 @@ const Footer: React.FC = () => {
               <p className="">Privacy Policy</p>
             </Link>
           </div>
-          <button
-            onClick={pageUp}
-            className="bg-gray-100 p-3 w-12 h-12 rounded-full drop-shadow-button mb-10 hover:-translate-y-3  transition ease-in-out duration-300"
-          >
-            <ArrowUp />
-          </button>
+
+          <ButtonCircle
+            stylesButton={"bg-gray-100"}
+            icon={<ArrowUp />}
+            handleClick={pageUp}
+          />
         </div>
       </div>
     </footer>

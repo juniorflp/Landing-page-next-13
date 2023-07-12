@@ -20,7 +20,6 @@ const SideBar: React.FC = () => {
     e: "#000",
   });
 
-  //animate-buttonExit
   const [classAnimation, setClassAnimation] = useState(styles.hasBtn);
 
   useEffect(() => {

@@ -36,28 +36,6 @@ module.exports = {
         xl: "1550px",
       },
       keyframes: {
-        buttonEnter: {
-          "0%": {
-            transform: "scale(0)",
-            opacity: "0",
-          },
-
-          "100%": {
-            transform: "scale(1)",
-            opacity: "1",
-          },
-        },
-        buttonExit: {
-          "0%": {
-            transform: "scale(1)",
-            opacity: "1",
-          },
-
-          "100%": {
-            transform: "scale(0)",
-            opacity: "0",
-          },
-        },
         fly: {
           "0%": { transform: "translate(-10%,-10%)" },
           "20%": { transform: "translate(50%,40%)" },
@@ -67,11 +45,16 @@ module.exports = {
           "90%": { transform: "translate(80%,10%)" },
           "100%": { transform: "translate(-10%,-10%)" },
         },
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "30%": { transform: "rotate(60deg)" },
+          "70%": { transform: "rotate(-60deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         fly: "fly 50s linear infinite",
-        buttonEnter: "buttonEnter 1s ease 0s 1 normal forwards",
-        buttonExit: "buttonExit 1s ease 0s 1 normal forwards",
+        rotate: "rotate 3s linear infinite",
       },
     },
   },
