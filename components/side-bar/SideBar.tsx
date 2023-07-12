@@ -2,14 +2,16 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import ButtonSquare from "./ButtonSquare";
+import ButtonSquare from "../ButtonSquare";
 import { useGlobalContext } from "@/app/context/store";
 import { Instagram, Linkedin, Menu, Twitch, Twitter } from "lucide-react";
 import { useTheme } from "next-themes";
+import styles from "./animationSideBar.module.css";
 
-const NavBar: React.FC = () => {
+const SideBar: React.FC = () => {
   const { toggleBlackScreen } = useGlobalContext();
   const { resolvedTheme } = useTheme();
+  const [showSideBar, setShowSideBar] = useState(true);
   const [colorIcon, setColorIcon] = useState({
     a: "#243561",
     b: "#243561",
@@ -17,6 +19,24 @@ const NavBar: React.FC = () => {
     d: "#243561",
     e: "#000",
   });
+
+  //animate-buttonExit
+  const [classAnimation, setClassAnimation] = useState(styles.hasBtn);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY >= 3100) {
+        setClassAnimation("");
+      } else {
+        setClassAnimation(styles.hasBtn);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (resolvedTheme === "dark") {
@@ -38,7 +58,7 @@ const NavBar: React.FC = () => {
     }
   }, [resolvedTheme]);
 
-  console.log(resolvedTheme);
+  console.log(showSideBar);
 
   return (
     <aside className="w-48 fixed top-0 right-0 h-screen z-40 ">
@@ -68,7 +88,10 @@ const NavBar: React.FC = () => {
           handleClick={toggleBlackScreen}
           stylesButton="lg:mr-16 xl:mr-36 hover:bg-black hover:dark:bg-white"
         />
-        <div className="flex flex-col  items-center lg:mt-64 xl:mt-[450px] gap-8 animate-buttonEnter ">
+
+        <div
+          className={`flex flex-col  items-center lg:mt-64 xl:mt-[450px] gap-8 ${styles.hideBtn} ${classAnimation}`}
+        >
           <Link
             href="https://www.instagram.com/junioredu_real/"
             target="_blank"
@@ -189,4 +212,4 @@ const NavBar: React.FC = () => {
   );
 };
 
-export default NavBar;
+export default SideBar;

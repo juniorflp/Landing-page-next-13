@@ -52,7 +52,6 @@ export const GlobalContextProvider = ({
       setTheme("light");
     }
     function handleScroll() {
-      console.log(window.scrollY);
       if (window.scrollY > 300 && window.scrollY <= 3150) {
         setTheme("dark");
       } else {

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import NavScreen from "../nav-screen/NavScreen";
+import { NavScreen } from "@/components";
 
 const Hero = () => {
   return (
     <>
       <NavScreen />
-      <div className="hero h-screen px-32">
+      <div className="hero h-screen px-32 transition ease-in-out duration-600">
         <div className="xl:mt-[38%] lg:mt-[36%]  w-[79%] flex flex-col gap-3">
           <h1 className="lg:text-[55px] xl:text-[70px] font-semibold leading-tight ">
             We are a group of creative people
@@ -17,7 +17,7 @@ const Hero = () => {
             WEBSITE | BRANDING | UI/UX | VISUAL | ECOMMERCE | IA
           </p>
         </div>
-        <div className="bg-[#fcfcfc] dark:bg-black xl:w-[1200px] lg:w-[900px] md:w-[600px] xl:h-[1200px] lg:h-[900px] md:h-[600px] rounded-[50%] absolute -z-10 animate-fly" />
+        <div className="bg-[#fcfcfc] dark:bg-black xl:w-[1200px] lg:w-[900px] md:w-[600px] xl:h-[1200px] lg:h-[900px] md:h-[600px] rounded-[50%] absolute -z-10 animate-fly transition linear duration-700" />
       </div>
     </>
   );

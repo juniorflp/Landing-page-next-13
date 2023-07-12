@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import imageIa1 from "../../public/assets/ia1.png";
 import imageIa2 from "../../public/assets/ia2.png";
@@ -10,8 +9,7 @@ import img3 from "../../public/assets/img3.png";
 import img4 from "../../public/assets/img4.webp";
 import img5 from "../../public/assets/img5.jpg";
 import img6 from "../../public/assets/img6.webp";
-
-import CardHome from "./CardHome";
+import { CardHome } from "@/components";
 import { Slider } from "..";
 import Image from "next/image";
 

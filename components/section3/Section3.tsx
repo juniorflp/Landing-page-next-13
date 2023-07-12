@@ -3,13 +3,13 @@ import styles from "./extraStyles.module.css";
 import Image from "next/image";
 import customerPhoto from "../../public/assets/user.jpg";
 import customerPhoto2 from "../../public/assets/user2.jpg";
-import CardCustomer from "./CardCustomer";
+import { CardCustomer } from "@/components";
 
 const Section3: React.FC = () => {
   return (
-    <section className="hero mt-48 h-screen px-32 mb-24">
+    <section className="hero mt-56 px-32 ">
       <div className="flex flex-col  items-center">
-        <h1 className="text-white  font-bold text-3xl">
+        <h1 className="text-white  font-bold text-3xl z-10">
           The feedback from our{" "}
           <span className={`${styles["text-gradient"]}`}>customers</span>
         </h1>

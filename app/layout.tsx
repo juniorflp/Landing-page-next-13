@@ -1,8 +1,8 @@
-import { Footer, LogoComponent, NavBar } from "@/components";
+import { Footer, LogoComponent, SideBar } from "@/components";
 import "./globals.css";
 import { GlobalContextProvider } from "./context/store";
-import { Montserrat } from "next/font/google";
 import ThemeComponentProvider from "./ThemeComponentProvider";
+import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} relative`}>
         <ThemeComponentProvider>
           <GlobalContextProvider>
-            <NavBar />
+            <SideBar />
             <LogoComponent />
             {children}
             <Footer />

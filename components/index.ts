@@ -1,8 +1,25 @@
 import Hero from "./hero/Hero";
 import Slider from "./slider/Slider";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import SideBar from "./side-bar/SideBar";
+import Footer from "./footer/Footer";
 import ButtonSquare from "./ButtonSquare";
 import LogoComponent from "./LogoComponent";
+import Section3 from "./section3/Section3";
+import Section2 from "./section2/Section2";
+import CardCustomer from "./section3/CardCustomer";
+import CardHome from "./section2/CardHome";
+import NavScreen from "./nav-screen/NavScreen";
 
-export { Hero, NavBar, Footer, ButtonSquare, LogoComponent, Slider };
+export {
+  Hero,
+  SideBar,
+  Footer,
+  ButtonSquare,
+  LogoComponent,
+  Slider,
+  Section3,
+  Section2,
+  CardCustomer,
+  CardHome,
+  NavScreen,
+};

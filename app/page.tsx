@@ -1,10 +1,8 @@
-import { Hero } from "@/components";
-import Section2 from "@/components/section2/Section2";
-import Section3 from "@/components/section3/Section3";
+import { Hero, Section2, Section3 } from "@/components";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-bg-color-ligth dark:bg-black flex flex-col ">
+    <main className="overflow-hidden bg-bg-color-ligth dark:bg-black flex flex-col transition linear duration-700">
       <Hero />
       <Section2 />
       <Section3 />

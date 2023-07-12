@@ -32,7 +32,7 @@
     transform: translate(600%, 220%);
   }
   80% {
-    transform: translate(700%, -500%);
+    transform: translate(700%, -300%);
   }
 }
 
@@ -63,7 +63,7 @@
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(800%, -820%);
+    transform: translate(800%, -620%);
   }
   80% {
     transform: translate(-550%, 210%);

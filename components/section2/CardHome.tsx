@@ -1,3 +1,5 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import styles from "./animationCard.module.css";
