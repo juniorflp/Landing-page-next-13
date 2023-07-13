@@ -4,7 +4,14 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ButtonSquare from "../ButtonSquare";
 import { useGlobalContext } from "@/app/context/store";
-import { Instagram, Linkedin, Menu, Twitch, Twitter } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  Menu,
+  Twitch,
+  Twitter,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import styles from "./animationSideBar.module.css";
 
@@ -176,7 +183,7 @@ const SideBar: React.FC = () => {
               stylesButton="lg:mr-16 xl:mr-36 hover:bg-black hover:dark:bg-white"
             />
           </Link>
-          <Link href="https://www.twitch.tv/" target="_blank">
+          <Link href="https://github.com/juniorflp" target="_blank">
             <ButtonSquare
               onMouseEnter={() => {
                 if (resolvedTheme === "dark") {
@@ -193,7 +200,7 @@ const SideBar: React.FC = () => {
                 }
               }}
               icon={
-                <Twitch
+                <Github
                   size={30}
                   color={colorIcon.d}
                   style={{ transition: "ease-in 0.3s" }}

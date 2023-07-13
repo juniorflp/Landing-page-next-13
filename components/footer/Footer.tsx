@@ -72,11 +72,11 @@ const Footer: React.FC = () => {
               </Link>
 
               <Link
-                href="https://www.twitch.tv/"
+                href="https://github.com/juniorflp"
                 target="_blank"
                 className="border-b border-transparent hover:border-b-black  transition ease-in-out duration-300"
               >
-                <p className="">Twitch</p>
+                <p className="">Github</p>
               </Link>
             </div>
           </div>

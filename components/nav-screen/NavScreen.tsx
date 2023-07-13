@@ -59,11 +59,11 @@ const NavScreen: React.FC = () => {
             <p>Linkedin</p>
           </Link>
           <Link
-            href="https://www.twitch.tv/"
+            href="https://github.com/juniorflp"
             target="_blank"
             className={`${styles.link}`}
           >
-            <p>Twitch</p>
+            <p>Github</p>
           </Link>
           <div className={`${styles.animation} ${styles.startHome}`}></div>
         </div>
