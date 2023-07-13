@@ -12,14 +12,18 @@ import { useTheme } from "next-themes";
 
 interface ContextProps {
   showBlackScreen: boolean;
+  showBlackScreenMobile: boolean;
   openAndClosseScreen: string;
   toggleBlackScreen: () => void;
+  toggleBlackScreenMobile: () => void;
 }
 
 const GlobalContext = createContext<ContextProps>({
   openAndClosseScreen: styles["circle-animation"],
   showBlackScreen: false,
+  showBlackScreenMobile: false,
   toggleBlackScreen: () => {},
+  toggleBlackScreenMobile: () => {},
 });
 
 export const GlobalContextProvider = ({
@@ -28,9 +32,14 @@ export const GlobalContextProvider = ({
   children: ReactNode;
 }) => {
   const [showBlackScreen, setShowBlackScreen] = useState(false);
+  const [showBlackScreenMobile, setShowBlackScreenMobile] = useState(false);
   const [openAndClosseScreen, setopenAndClosseScreen] = useState(
     styles["circle-animation"]
   );
+
+  const toggleBlackScreenMobile = () => {
+    setShowBlackScreenMobile((prev) => !prev);
+  };
 
   const toggleBlackScreen = () => {
     if (!showBlackScreen) {
@@ -66,7 +75,13 @@ export const GlobalContextProvider = ({
 
   return (
     <GlobalContext.Provider
-      value={{ openAndClosseScreen, showBlackScreen, toggleBlackScreen }}
+      value={{
+        openAndClosseScreen,
+        showBlackScreen,
+        toggleBlackScreen,
+        toggleBlackScreenMobile,
+        showBlackScreenMobile,
+      }}
     >
       {children}
     </GlobalContext.Provider>

@@ -7,15 +7,15 @@ import { CardCustomer } from "@/components";
 
 const Section3: React.FC = () => {
   return (
-    <section className="hero mt-56 px-32 ">
-      <div className="flex flex-col  items-center">
-        <h1 className="text-white  font-bold text-3xl z-10">
+    <section className="hero md:mt-56 mt-20 md:px-32 px-2 ">
+      <div className="flex flex-col  items-center ">
+        <h1 className="text-white text-center sm:start-start font-bold text-3xl z-10">
           The feedback from our{" "}
           <span className={`${styles["text-gradient"]}`}>customers</span>
         </h1>
 
         <div
-          className={`${styles["container-glass"]} relative flex flex-col mt-24 z-10 p-10 gap-20`}
+          className={`${styles["container-glass"]} md:w-[60%] md:h-[600px] relative flex flex-col mt-24 z-10 p-4 md:p-10  gap-20`}
         >
           <CardCustomer
             image={customerPhoto}

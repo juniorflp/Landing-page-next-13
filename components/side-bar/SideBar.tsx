@@ -57,10 +57,8 @@ const SideBar: React.FC = () => {
     }
   }, [resolvedTheme]);
 
-  console.log(showSideBar);
-
   return (
-    <aside className="w-48 fixed top-0 right-0 h-screen z-40 ">
+    <aside className="w-48 fixed top-0 right-0 h-screen z-40 hidden md:flex">
       <div className="flex flex-col  items-center bg-transparent h-full lg:py-10 xl:py-16 px-2 ">
         <ButtonSquare
           onMouseEnter={() => {

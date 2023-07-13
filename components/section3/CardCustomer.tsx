@@ -9,7 +9,7 @@ interface CardsProps {
 
 const CardCustomer = ({ image, name, text }: CardsProps) => {
   return (
-    <div className="flex gap-8  items-center">
+    <div className="flex md:flex-row flex-col gap-8  items-center">
       <div className="relative w-24 h-24 rounded-full  ">
         <Image
           src={image}

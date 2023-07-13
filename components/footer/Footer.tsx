@@ -14,26 +14,26 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="overflow-hidden bg-bg-color-ligth dark:bg-black flex flex-col h-screen px-32 pt-56 transition linear duration-700">
-      <div className="w-full">
+    <footer className="overflow-hidden bg-bg-color-ligth dark:bg-black flex flex-col h-screen md:px-32 px-2 md:pt-56 pt-28 transition linear duration-700">
+      <div className="w-full md:text-[16px] text-[14px]">
         <p>KEEP IN TOUCH</p>
       </div>
       <div className="grid lg:grid-cols-4   gap-6 w-full h-full  mb-10">
-        <div className="flex flex-col  col-span-2 ">
+        <div className="flex  flex-col  col-span-2 ">
           <div className="flex flex-1 flex-col ">
-            <h1 className={`${styles.email}`}>
+            <h1 className={`${styles.email} md:text-[48px] text-[26px]`}>
               <a href="mailTo:juniorcose@gmail.com" target="_blank">
                 juniorcose@gmail.com
               </a>
             </h1>
           </div>
-          <div className="border-t-[1px] border-gray-600 w-fit">
+          <div className="md:flex hidden  border-t-[1px] border-gray-600 w-fit">
             <p className="mt-4">
               © 2023-Eduardo | Application developed for study.
             </p>
           </div>
         </div>
-        <div className="flex flex-1 flex-col col-span-1 gap-10 px-10 mt-5 ">
+        <div className="flex flex-1 flex-col col-span-1 md:gap-10 gap-2 md:px-10 px-2 mt-5 ">
           <div className="flex flex-col gap-1">
             <p className="font-bold ">ADDRESS</p>
             <p className="mt-6">911,Umbrella</p>
@@ -117,11 +117,16 @@ const Footer: React.FC = () => {
           </div>
 
           <ButtonCircle
-            stylesButton={"bg-gray-100"}
+            stylesButton={"bg-gray-100 mt-4 md:mt-0"}
             icon={<ArrowUp />}
             handleClick={pageUp}
           />
         </div>
+      </div>
+      <div className="flex md:hidden   border-t-[1px] border-gray-600 w-fit">
+        <p className="mt-4">
+          © 2023-Eduardo | Application developed for study.
+        </p>
       </div>
     </footer>
   );

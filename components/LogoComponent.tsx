@@ -8,7 +8,7 @@ import { useGlobalContext } from "@/app/context/store";
 const LogoComponent: React.FC = () => {
   const { showBlackScreen } = useGlobalContext();
   return (
-    <div className="w-32 fixed top-10 left-28 text-center z-[99] ">
+    <div className="w-32 fixed top-10 left-28 text-center z-[99] hidden md:flex">
       <p
         className={`text-3xl font-bold tracking-tighter leading-relaxed dark:text-white  ${
           showBlackScreen ? "text-white" : "text-black"

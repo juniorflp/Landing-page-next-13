@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes } from "react";
 
 export interface IButtonSquare extends ButtonHTMLAttributes<HTMLButtonElement> {
   stylesButton?: string;
-  handleClick: () => void;
+  handleClick?: () => void;
   icon: JSX.Element;
 }
 

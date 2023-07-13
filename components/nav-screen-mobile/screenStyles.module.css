@@ -1,0 +1,10 @@
+.hideBtn {
+  opacity: 0;
+  transform: translateX(450px);
+  transition: all 0.5s ease-in-out;
+}
+
+.hasBtn {
+  transform: translateX(0px);
+  opacity: 1;
+}

@@ -33,11 +33,13 @@ const CardHome: React.FC<CadProps> = ({ image, title, text }) => {
 
         <Image src={image} quality={100} alt="Picture of the author " />
       </div>
-      <div className="flex flex-col ">
+      <div className="flex flex-col items-center sm:items-start">
         <p className="text-[14px] font-bold text-font-card uppercase mt-8">
           {title}
         </p>
-        <p className="text-[24px]  text-font-card mt-4">{text}</p>
+        <p className="text-[24px] text-center sm:text-left text-font-card mt-4">
+          {text}
+        </p>
       </div>
     </div>
   );

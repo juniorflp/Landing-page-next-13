@@ -1,4 +1,4 @@
-import { Footer, LogoComponent, SideBar } from "@/components";
+import { Footer, HeaderMobile, LogoComponent, SideBar } from "@/components";
 import "./globals.css";
 import { GlobalContextProvider } from "./context/store";
 import ThemeComponentProvider from "./ThemeComponentProvider";
@@ -26,6 +26,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} relative`}>
         <ThemeComponentProvider>
           <GlobalContextProvider>
+            <HeaderMobile />
             <SideBar />
             <LogoComponent />
             {children}
