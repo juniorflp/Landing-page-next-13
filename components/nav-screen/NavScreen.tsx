@@ -17,7 +17,7 @@ const NavScreen: React.FC = () => {
     >
       <div className="absolute   w-[20%] h-[30%] top-[35%] right-[25%]">
         <nav className="flex flex-col ">
-          <Link href="/about-us" className="link-hero">
+          <Link href="/" className="link-hero">
             About
           </Link>
           <Link href="/" className="link-hero">
