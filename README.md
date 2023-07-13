@@ -3,7 +3,7 @@
 ## Landing Page - Next 13
 
 Esta landing page foi desenvolvida como forma de estudo, para aprender as novas funcionalidades do Next 13 (https://nextjs.org/blog/next-13) ,
-e conhecer mais a fundo o poder do Tailwind (https://tailwindcss.com/docs/installation), trabalhando com animações e responsividade.<br/><br/>
+e conhecer mais a fundo o poder do Tailwind (https://tailwindcss.com/docs/installation), trabalhando com animações, dark mode e responsividade.<br/><br/>
 Para testar a aplicação click no link https://landing-page-next-13.vercel.app/
 
 
