@@ -44,3 +44,67 @@
     transform: rotateY(100%);
   }
 }
+
+/* css infinite carroussel ---------------------------------------------------------------------------- */
+
+/* .slider {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 70vh;
+}
+
+.track {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  animation: scroll 40s linear infinite;
+}
+
+.slider:hover .track {
+  animation-play-state: paused;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex: 1;
+  width: 490px;
+  transition: all 0.3s ease-in;
+}
+
+.card:hover {
+  flex: 3;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  content: "";
+  height: 700px;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::after {
+  left: 0;
+  top: 0;
+}
+
+.slider::before {
+  right: 0;
+  top: 0;
+  transform: rotateZ(-180deg);
+} */
