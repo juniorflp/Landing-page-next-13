@@ -51,25 +51,21 @@ const features = [
 const AboutUs: React.FC = () => {
   const ref1 = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
+  const card3 = useRef<HTMLDivElement>(null);
 
   gsap.registerPlugin(ScrollTrigger);
-
-  // gsap.to(".anime", {
-  //   x: 700,
-  //   duration: 3,
-  //   scrollTrigger: ".anime",
-  // });
 
   useEffect(() => {
     if (ref1.current) {
       gsap.to(".anime", {
-        y: -1800,
-        duration: 5,
+        y: -1200,
+        duration: 0.9,
         scrollTrigger: {
           trigger: ref1.current,
-          start: "top 50%",
+          start: "top 0%",
           end: "bottom 0%",
           scrub: 1,
+          pin: true,
         },
       });
     }
@@ -86,13 +82,18 @@ const AboutUs: React.FC = () => {
       });
     }
 
-    ScrollTrigger.create({
-      markers: true,
-      start: "top 80%",
-      end: "top 50%",
-      trigger: ".anime2",
-      // toggleClass: { targets: "bg-slate-600", className: "bg-red-500" },
-      onEnter: () => console.log("esndksjdksdjskdjskdjk"),
+    const container = ref1.current;
+    const element = card3.current;
+
+    gsap.to(element, {
+      scrollTrigger: {
+        trigger: container,
+        start: "top 0%", // O elemento deve começar no meio da div
+        end: "center 0%", // O elemento deve terminar no meio da div
+        onEnter: () => console.log("entrou"),
+        onLeave: () => console.log("saiu"),
+        markers: true, // Para mostrar os marcadores do ScrollTrigger (opcional)
+      },
     });
   }, []);
 
@@ -119,18 +120,21 @@ const AboutUs: React.FC = () => {
         </div>
       </div>
       <div className="h-[200vh] flex  md:px-32 px-2 py-[200px] justify-center ">
-        <div className="sticky w-[600px] flex  top-10 pt-[100px] justify-center h-[500px] overflow-hidden">
-          <div ref={ref1} className="anime gap-1 ">
-            <div className=" aspect-square w-[300px] bg-blue-100"></div>
-            <div className=" aspect-square w-[300px] bg-blue-200"></div>
-            <div className=" aspect-square w-[300px] bg-blue-300"></div>
-            <div className=" aspect-square w-[300px] bg-blue-400"></div>
-            <div className=" aspect-square w-[300px] bg-blue-500"></div>
-            <div className=" aspect-square w-[300px] bg-blue-600"></div>
-            <div className=" aspect-square w-[300px] bg-blue-700"></div>
+        <div className="sticky w-[600px] flex  top-20  justify-center h-[550px] overflow-hidden bg-red-400">
+          <div ref={ref1} className="anime gap-10 ">
+            <div className="  aspect-square w-[300px] bg-blue-100"></div>
+            <div className="mt-10 aspect-square w-[300px] bg-blue-200"></div>
+            <div className="mt-10 aspect-square w-[300px] bg-blue-300"></div>
+            <div
+              ref={card3}
+              className="mt-10 aspect-square w-[300px] bg-blue-400"
+            ></div>
+            <div className="mt-10 aspect-square w-[300px] bg-blue-500"></div>
+            <div className="mt-10 aspect-square w-[300px] bg-blue-600"></div>
+            <div className="my-10 aspect-square w-[300px] bg-blue-700"></div>
           </div>
         </div>
-        <div className="sticky w-[600px] flex  top-10 pt-[100px] justify-start h-[500px] overflow-hidden">
+        {/* <div className="sticky w-[600px] flex  top-10 pt-[100px] justify-start h-[500px] overflow-hidden">
           <div ref={ref2} className="anime2 flex  gap-1">
             <div className="flex aspect-square w-[300px] bg-blue-100"></div>
             <div className="flex aspect-square w-[300px] bg-blue-200"></div>
@@ -140,7 +144,7 @@ const AboutUs: React.FC = () => {
             <div className="flex aspect-square w-[300px] bg-blue-600"></div>
             <div className="flex aspect-square w-[300px] bg-blue-700"></div>
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );
