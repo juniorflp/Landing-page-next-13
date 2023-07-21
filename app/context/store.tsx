@@ -1,7 +1,9 @@
 "use client";
 
 import {
+  Dispatch,
   ReactNode,
+  SetStateAction,
   createContext,
   useContext,
   useEffect,
@@ -9,6 +11,7 @@ import {
 } from "react";
 import styles from "../../components/nav-screen/navScreen.module.css";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
 interface ContextProps {
   showBlackScreen: boolean;
@@ -16,6 +19,8 @@ interface ContextProps {
   openAndClosseScreen: string;
   toggleBlackScreen: () => void;
   toggleBlackScreenMobile: () => void;
+  inViewFeatures: string | null;
+  setInViewFeatures: Dispatch<SetStateAction<string | null>>;
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -24,6 +29,8 @@ const GlobalContext = createContext<ContextProps>({
   showBlackScreenMobile: false,
   toggleBlackScreen: () => {},
   toggleBlackScreenMobile: () => {},
+  inViewFeatures: null,
+  setInViewFeatures: () => {},
 });
 
 export const GlobalContextProvider = ({
@@ -33,9 +40,11 @@ export const GlobalContextProvider = ({
 }) => {
   const [showBlackScreen, setShowBlackScreen] = useState(false);
   const [showBlackScreenMobile, setShowBlackScreenMobile] = useState(false);
+  const [inViewFeatures, setInViewFeatures] = useState<string | null>(null);
   const [openAndClosseScreen, setopenAndClosseScreen] = useState(
     styles["circle-animation"]
   );
+  const pathName = usePathname();
 
   const toggleBlackScreenMobile = () => {
     setShowBlackScreenMobile((prev) => !prev);
@@ -55,23 +64,27 @@ export const GlobalContextProvider = ({
 
   const { setTheme } = useTheme();
   useEffect(() => {
-    if (window.scrollY > 300 && window.scrollY <= 3150) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-    function handleScroll() {
+    if (pathName !== "/about-us") {
       if (window.scrollY > 300 && window.scrollY <= 3150) {
         setTheme("dark");
       } else {
         setTheme("light");
       }
     }
+    function handleScroll() {
+      if (pathName !== "/about-us") {
+        if (window.scrollY > 300 && window.scrollY <= 3150) {
+          setTheme("dark");
+        } else {
+          setTheme("light");
+        }
+      }
+    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pathName]);
 
   return (
     <GlobalContext.Provider
@@ -81,6 +94,8 @@ export const GlobalContextProvider = ({
         toggleBlackScreen,
         toggleBlackScreenMobile,
         showBlackScreenMobile,
+        inViewFeatures,
+        setInViewFeatures,
       }}
     >
       {children}
