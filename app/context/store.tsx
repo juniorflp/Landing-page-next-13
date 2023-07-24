@@ -21,6 +21,8 @@ interface ContextProps {
   toggleBlackScreenMobile: () => void;
   inViewFeatures: string | null;
   setInViewFeatures: Dispatch<SetStateAction<string | null>>;
+  cardId: number | null;
+  setCardId: Dispatch<SetStateAction<number | null>>;
 }
 
 const GlobalContext = createContext<ContextProps>({
@@ -31,6 +33,8 @@ const GlobalContext = createContext<ContextProps>({
   toggleBlackScreenMobile: () => {},
   inViewFeatures: null,
   setInViewFeatures: () => {},
+  cardId: null,
+  setCardId: () => {},
 });
 
 export const GlobalContextProvider = ({
@@ -41,6 +45,7 @@ export const GlobalContextProvider = ({
   const [showBlackScreen, setShowBlackScreen] = useState(false);
   const [showBlackScreenMobile, setShowBlackScreenMobile] = useState(false);
   const [inViewFeatures, setInViewFeatures] = useState<string | null>(null);
+  const [cardId, setCardId] = useState<number | null>(null);
   const [openAndClosseScreen, setopenAndClosseScreen] = useState(
     styles["circle-animation"]
   );
@@ -96,6 +101,8 @@ export const GlobalContextProvider = ({
         showBlackScreenMobile,
         inViewFeatures,
         setInViewFeatures,
+        cardId,
+        setCardId,
       }}
     >
       {children}
