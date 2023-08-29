@@ -54,3 +54,7 @@
 .link-hero-mobile {
   @apply text-2xl font-bold tracking-wide leading-relaxed text-white hover:text-gray-300  ease-in duration-300;
 }
+
+.custom-range {
+  accent-color: #303345;
+}

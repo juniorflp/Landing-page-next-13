@@ -167,11 +167,12 @@ const AboutUs: React.FC = () => {
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+  //test
 
   return (
     <main className="bg-bg-color-ligth">
-      {/* <NavScreenMobile />
-      <NavScreen />
+      <NavScreenMobile />
+      {/* <NavScreen /> */}
       <div className=" flex pt-96 md:px-32 px-2 gap-20 items-start">
         <div className="w-full flex py-[50vh] ">
           <ul>
@@ -190,7 +191,7 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="  h-[200vh] flex  md:px-32 px-2 py-[200px] justify-center ">
+      {/* <div className="  h-[200vh] flex  md:px-32 px-2 py-[200px] justify-center ">
         <div className="sticky w-[600px] flex  top-20  justify-center h-[550px] overflow-hidden bg-red-400 --tw-scroll-snap-strictness: snap-mandatory">
           <div ref={ref1} className="anime gap-10 ">
             <div className="  aspect-square w-[300px] bg-blue-100"></div>
@@ -205,9 +206,8 @@ const AboutUs: React.FC = () => {
             <div className="my-10 aspect-square w-[300px] bg-blue-700"></div>
           </div>
         </div>
-
       </div> */}
-      <div className="flex h-screen w-full"></div>
+      {/* <div className="flex h-screen w-full"></div>
       <div ref={itemRef} className="scrollDiv  flex     px-[100px]">
         <Swiper
           direction={"horizontal"}
@@ -262,22 +262,17 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
       </div>
+
       <div className="flex justify-center items-center flex-col w-full h-40 px-[300px] bg-gray-200">
-        <label
-          form="default-range"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Default range
-        </label>
         <input
-          className="custom-range"
+          className="accent-[#303345] h-10 w-40 "
           type="range"
           min="1"
           max="100"
           step="1"
           // value="15"
         />
-      </div>
+      </div> */}
     </main>
   );
 };
